@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udita Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="favicon.ico" />
+
+    <style>
+      .glass {
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.25);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-b from-purple-50 to-white text-gray-800 font-sans scroll-smooth">
+    <!-- Navbar -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-lg shadow-md z-50">
+      <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+        <h1 class="text-2xl font-bold text-purple-700 tracking-wide">UDITA</h1>
+
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#home" class="hover:text-purple-600 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-purple-600 transition">About</a></li>
+          <li><a href="#performances" class="hover:text-purple-600 transition">Performance</a></li>
+          <li><a href="#contact" class="hover:text-purple-600 transition">Contact</a></li>
+        </ul>
+
+        <button id="menu-btn" class="md:hidden text-purple-600 text-3xl">&#9776;</button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full text-center">
+      <a href="#home" class="block py-3 text-purple-600">Home</a>
+      <a href="#about" class="block py-3 text-purple-600">About</a>
+      <a href="#performances" class="block py-3 text-purple-600">Performance</a>
+      <a href="#contact" class="block py-3 text-purple-600">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 pt-28 px-6 container mx-auto">
+      <div class="text-center md:text-left space-y-6 max-w-xl">
+        <h2 class="text-4xl md:text-6xl font-extrabold text-purple-700 leading-tight">
+          Hi, I'm Udita <span class="text-pink-500">Bhattacharjee</span> ✨
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          A passionate singer and dancer, blending rhythm, emotion, and story to inspire hearts.
+        </p>
+        <a href="#contact" class="inline-block bg-purple-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-purple-700 transition-all">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Profile Image -->
+      <div
+  id="profileBox"
+  class="w-56 h-72 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-xl border-2 border-purple-400 bg-white hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+>
+  <img src="images/profile.jpg" class="w-full h-full object-cover" />
+</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-purple-50/60 backdrop-blur-lg">
+      <div class="container mx-auto text-center px-6 max-w-3xl">
+        <h2 class="text-3xl font-bold text-purple-700 mb-5">About Me</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Hi! I'm <span class="text-purple-600 font-semibold">Udita</span> — a passionate dancer and singer who brings stories to life through graceful movement and powerful vocals. My work blends emotion, technique, and creativity to deliver unforgettable performances.
+        </p>
+      </div>
+    </section>
+
+    <!-- Performances Section -->
+    <section id="performances" class="py-20 max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-purple-700 text-center mb-14">Awards • Performances • Experience</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Card Template -->
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/Award.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-purple-700 text-white px-3 py-1 rounded-full">Award</span>
+            <h3 class="text-xl font-semibold text-purple-600 mt-3 mb-2">National Music Award</h3>
+            <p class="text-gray-600">Recognized nationally for excellence and contribution in musical artistry.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/Dance.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-pink-600 text-white px-3 py-1 rounded-full">Performance</span>
+            <h3 class="text-xl font-semibold text-pink-600 mt-3 mb-2">Live Stage Show</h3>
+            <p class="text-gray-600">Delivered a mesmerizing performance that captivated the entire audience.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/Dnace2.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-orange-500 text-white px-3 py-1 rounded-full">Dance</span>
+            <h3 class="text-xl font-semibold text-orange-500 mt-3 mb-2">Festival Choreography</h3>
+            <p class="text-gray-600">A fusion choreography mixing tradition with modern expressive styles.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/press.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-blue-600 text-white px-3 py-1 rounded-full">Press</span>
+            <h3 class="text-xl font-semibold text-blue-600 mt-3 mb-2">Press Coverage</h3>
+            <p class="text-gray-600">Featured in newspapers for outstanding artistic performances.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/Drama.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-green-600 text-white px-3 py-1 rounded-full">Drama</span>
+            <h3 class="text-xl font-semibold text-green-600 mt-3 mb-2">Stage Drama Role</h3>
+            <p class="text-gray-600">Played a strong lead role delivering emotional theatrical depth.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden shadow-xl hover:scale-[1.04] transition duration-300">
+          <img src="images/Award.jpeg" class="h-56 w-full object-cover" />
+          <div class="p-5">
+            <span class="text-xs bg-yellow-500 text-white px-3 py-1 rounded-full">Achievement</span>
+            <h3 class="text-xl font-semibold text-yellow-600 mt-3 mb-2">Special Jury Recognition</h3>
+            <p class="text-gray-600">Awarded for exceptional artistic expression and performance style.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-3xl font-bold text-purple-700 mb-6">Contact</h2>
+
+      <form class="glass p-6 rounded-xl max-w-lg space-y-4">
+        <label class="block text-sm font-semibold">Name
+          <input class="w-full bg-white/20 border border-purple-200 p-2 rounded mt-1" />
+        </label>
+
+        <label class="block text-sm font-semibold">Email
+          <input class="w-full bg-white/20 border border-purple-200 p-2 rounded mt-1" />
+        </label>
+
+        <label class="block text-sm font-semibold">Message
+          <textarea class="w-full bg-white/20 border border-purple-200 p-2 rounded mt-1 h-28"></textarea>
+        </label>
+
+        <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition w-full">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Brand -->
+    <div>
+      <h2 class="text-2xl font-bold text-pink-600 tracking-wider">
+        <span class="text-gray-900">Udita</span> Bhattacharjee
+      </h2>
+     
+
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-4">
+        <a
+          href="#"
+          class="p-2 rounded-xl bg-gray-100 hover:bg-pink-500 hover:text-white transition shadow-sm"
+        >
+          <i class="fa-brands fa-github text-gray-700"></i>
+        </a>
+        <a
+          href="#"
+          class="p-2 rounded-xl bg-gray-100 hover:bg-pink-500 hover:text-white transition shadow-sm"
+        >
+          <i class="fa-brands fa-linkedin text-gray-700"></i>
+        </a>
+        <a
+          href="#"
+          class="p-2 rounded-xl bg-gray-100 hover:bg-pink-500 hover:text-white transition shadow-sm"
+        >
+          <i class="fa-brands fa-facebook text-gray-700"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Quick Links</h3>
+      <ul class="space-y-2 text-gray-600">
+        <li>
+          <a href="#home" class="hover:text-pink-500 transition">Home</a>
+        </li>
+        <li>
+          <a href="#projects" class="hover:text-pink-500 transition">Performance</a>
+        </li>
+       
+        <li>
+          <a href="#about" class="hover:text-pink-500 transition">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-pink-500 transition">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Contact</h3>
+      <p class="text-gray-600">📩 Email: somadritactg@gmail.com</p>
+      <p class="text-gray-600">🔎 Location: Chittagong, Bangladesh</p>
+      <p class="text-gray-600">📞 Phone: +880 1828-331394</p>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-gray-200 py-4 text-center text-gray-600 text-sm">
+    © 2025 Udita Bhattacharjee — All rights reserved.
+  </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script>
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      ScrollReveal().reveal(".glass", { interval: 120, distance: "40px", origin: "bottom", duration: 900 });
+      ScrollReveal().reveal("#home h2", { distance: "60px", origin: "left", duration: 900 });
+      ScrollReveal().reveal("#home p", { distance: "60px", origin: "right", duration: 900 });
+      
+  // Entry animation (float-up + fade-in + scale)
+  gsap.from("#profileBox", {
+    opacity: 0,
+    y: 40,
+    scale: 0.85,
+    duration: 1,
+    ease: "power3.out",
+  });
+</script>
+   
+  </body>
+</html>
